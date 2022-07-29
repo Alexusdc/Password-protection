@@ -20,7 +20,14 @@ function generatePassword() {
   var specialChar = confirm("Would you like to use special characters?");
   var length = prompt("Please insert how long you would like your password to be. It must be between 8 and 128 characters.");
 
-  
+  // 3. Validate input
+ 
+  // Making sure length is correct
+  if (length < 8 || length > 128) {
+    alert("Your password is not between 8 and 128 characters, please try again.")
+    
+    var length = prompt("Please insert how long you would like your password to be. It must be between 8 and 128 characters.");
+  }
 }
 
 // Write password to the #password input
