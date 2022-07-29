@@ -38,7 +38,31 @@ function generatePassword() {
     var specialChar = confirm("Would you like to use special characters?");
   }
 
-  
+  // 4. Generate password based on criteria
+  if (lowercase) {
+    string = string.concat(lowercaseAlphabet);
+  }
+
+  if (uppercase) {
+    string = string.concat(uppercaseAlphabet);
+  }
+
+  if (num) {
+  string = string.concat(numbers);
+  }
+
+  if (specialChar) {
+  string = string.concat(specialCharacters);
+  }
+
+  console.log (string);
+
+  for (var i = 0; i < length; i++) {
+  // Continues to select a random character value until it is the desired length
+  console.log (userPassword);
+  userPassword += string [Math.floor(Math.random() * string.length)];
+  }
+  return userPassword;
 }
 
 // Write password to the #password input
