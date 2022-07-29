@@ -28,6 +28,17 @@ function generatePassword() {
     
     var length = prompt("Please insert how long you would like your password to be. It must be between 8 and 128 characters.");
   }
+
+  // Making sure at least one criteria is used
+  else if (lowercase === false && uppercase === false && num === false && specialChar === false) {
+    window.alert("You must choose at least one password criteria");
+    var lowercase = confirm("Would you like to use lowercase letters?");
+    var uppercase = confirm("Would you like to use uppercase letters?");
+    var num = confirm("Would you like to use numbers?");
+    var specialChar = confirm("Would you like to use special characters?");
+  }
+
+  
 }
 
 // Write password to the #password input
